@@ -1,0 +1,12 @@
+data segment
+    c db ?
+data ends
+code segment
+    mov al,00h
+    mov bl,02h
+    mov cl,05h
+    l1:add al,bl
+       add bl,02h       
+       loop l1;
+    mov c,al
+code ends
