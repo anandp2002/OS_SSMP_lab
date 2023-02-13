@@ -1,0 +1,15 @@
+data segment
+    a db 0Ch
+    b db 0Ah
+    c db ?
+data ends
+code segment
+    assume cs:code,ds:data
+    start:mov ax,data
+    mov ds,ax
+    mov al,a
+    mov bl,b
+    sub al,bl
+    mov c,al
+    end start
+code ends
